@@ -1,0 +1,14 @@
+var y = 'Global';
+function outerFunc() {
+	'use strict';
+	var y = 'Local Outer';
+	
+	function innerFunc() {
+		var z = 'Local Inner';
+		console.log(z);
+		console.log(y);
+		console.log(x);
+	}
+	innerFunc();
+}
+outerFunc();
